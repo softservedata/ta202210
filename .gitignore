@@ -120,7 +120,7 @@ workspace.xml
 # Ignore .doc .pfd .docx
 *.doc
 *.docx
-*.pdf
+#*.pdf
 
 # bower
 /bower_components/
