@@ -1,4 +1,4 @@
-package com.softserve.edu;
+package main.java.com.softserve.edu;
 
 public class Calc {
 

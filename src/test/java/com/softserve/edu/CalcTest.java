@@ -1,5 +1,6 @@
-package com.softserve.edu;
+package test.java.com.softserve.edu;
 
+import main.java.com.softserve.edu.Calc;
 import org.junit.Assert;
 import org.junit.Test;
 
