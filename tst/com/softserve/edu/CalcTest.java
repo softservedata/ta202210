@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class CalcTest {
 
-    //@Test
+    @Test
     public void firstCheck() {
         //
         //int i = 0;
