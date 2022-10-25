@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.softserve.edu</groupId>
-  <artifactId>ta202210</artifactId>
+  <artifactId>ta202210calc</artifactId>
   <version>1.0</version>
 
   <packaging>jar</packaging>
@@ -26,7 +26,6 @@
   <dependencies>
 
     <!-- - - - - - Test - - - - - -->
-    <!--
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -34,6 +33,7 @@
       <scope>test</scope>
     </dependency>
 
+  <!--
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
@@ -63,15 +63,15 @@
     <!-- <scope>test</scope> -->
     <!-- </dependency> -->
 
-    <dependency>
-      <groupId>org.testng</groupId>
-      <artifactId>testng</artifactId>
+<!--    <dependency>-->
+<!--      <groupId>org.testng</groupId>-->
+<!--      <artifactId>testng</artifactId>-->
       <!--            <version>6.14.3</version>-->
-      <version>7.4.0</version>
+<!--      <version>7.4.0</version>-->
       <!--  <version>7.5</version>-->
 <!--      <version>7.6.1</version>-->
-      <scope>test</scope>
-    </dependency>
+<!--      <scope>test</scope>-->
+<!--    </dependency>-->
 
     <!-- - - - - - DB - - - - - -->
     <dependency>
@@ -280,12 +280,12 @@
             </surefire.application.password>
           </systemPropertyVariables>
           <reportsDirectory>${testng.reports.directory}</reportsDirectory>
-          <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
+<!--          <suiteXmlFiles>-->
+<!--            <suiteXmlFile>testng.xml</suiteXmlFile>-->
             <!-- <suiteXmlFile>testng2.xml</suiteXmlFile> -->
             <!-- <suiteXmlFile>testng.xml</suiteXmlFile> -->
 <!--            <suiteXmlFile>testng03par.xml</suiteXmlFile>-->
-          </suiteXmlFiles>
+<!--          </suiteXmlFiles>-->
           <!--
           <argLine>
               -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
