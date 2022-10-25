@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.softserve.edu</groupId>
-  <artifactId>ta202210calc</artifactId>
+  <artifactId>ta202210calctest</artifactId>
   <version>1.0</version>
 
   <packaging>jar</packaging>
@@ -236,6 +236,14 @@
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjweaver</artifactId>
       <version>1.9.9.1</version>
+      <!-- <scope>test</scope> -->
+    </dependency>
+
+    <!-- - - - Calc - - - -->
+    <dependency>
+      <groupId>com.softserve.edu</groupId>
+      <artifactId>ta202210calc</artifactId>
+      <version>1.0</version>
       <!-- <scope>test</scope> -->
     </dependency>
 
