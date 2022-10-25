@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+   options {
+        buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '5'))
+        timestamps()
+    }
+
+   stages {
+        stage('Build') {
+            steps {
+                // Get some code from a GitHub repository
+                bat 'git clone https://github.com/softservedata/ta202210.git .'
+                //bat 'ren ta202210 ta202210calc'
+                //bat 'cd ta202210calc'
+                //bat 'dir'
+                bat 'git checkout calc'
+                bat 'mvn install'
+                //bat 'del *.*'
+                bat 'git checkout calctest'
+                bat 'mvn test'
+                //
+                //bat 'git clone https://github.com/softservedata/ta202210.git .'
+                //bat 'ren ta202210 ta202210calctest'
+                //bat 'cd ta202210calctest'
+                //bat 'git checkout calctest'
+                //bat 'mvn test'
+                //
+            }
+
+        }
+    }
+}
