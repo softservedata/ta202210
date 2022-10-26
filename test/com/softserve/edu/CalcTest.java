@@ -1,5 +1,6 @@
 package com.softserve.edu;
 
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -18,7 +19,7 @@ public class CalcTest {
         System.out.println("done, i = " + i);
     }
 
-    @Test
+   @Test
     public void checkAdd1() {
         Calc calc = new Calc();
         double actual = 0;
