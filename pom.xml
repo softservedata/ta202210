@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.softserve.edu</groupId>
-  <artifactId>ta202210testng</artifactId>
+  <artifactId>ta202210junit</artifactId>
   <version>1.0</version>
 
   <packaging>jar</packaging>
@@ -26,7 +26,6 @@
   <dependencies>
 
     <!-- - - - - - Test - - - - - -->
-    <!--
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -54,7 +53,6 @@
       <version>1.9.1</version>
       <scope>test</scope>
     </dependency>
-    -->
 
     <!-- <dependency> -->
     <!-- <groupId>org.testng</groupId> -->
@@ -63,15 +61,15 @@
     <!-- <scope>test</scope> -->
     <!-- </dependency> -->
 
-    <dependency>
-      <groupId>org.testng</groupId>
-      <artifactId>testng</artifactId>
+<!--    <dependency>-->
+<!--      <groupId>org.testng</groupId>-->
+<!--      <artifactId>testng</artifactId>-->
       <!--            <version>6.14.3</version>-->
-      <version>7.4.0</version>
+<!--      <version>7.4.0</version>-->
 <!--        <version>7.5</version>-->
 <!--      <version>7.6.1</version>-->
-      <scope>test</scope>
-    </dependency>
+<!--      <scope>test</scope>-->
+<!--    </dependency>-->
 
     <!-- - - - - - DB - - - - - -->
     <dependency>
