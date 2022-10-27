@@ -14,6 +14,7 @@
                     <!--             <include name="testApp2" />-->
                 </methods>
             </class>
+            <class name="com.softserve.edu.testng.FirstTest" />
         </classes>
     </test> <!-- Test -->
 
