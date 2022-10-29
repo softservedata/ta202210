@@ -20,3 +20,7 @@ public class AppTest {
         Assert.assertTrue(true);
     }
 }
+
+/**
+ * Edited by Zoriana.
+ */
