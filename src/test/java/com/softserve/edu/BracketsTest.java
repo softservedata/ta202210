@@ -18,7 +18,7 @@ public class BracketsTest {
     @Test
     public void testTwo(){
         System.out.println("(()");
-        Assert.assertFalse(false, "test failure");
+        Assert.assertTrue(false, "test failure");
     }
 
 }
