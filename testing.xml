@@ -34,4 +34,20 @@
         </classes>
     </test> <!-- Test -->
 
+    <test verbose="9" name="TestGroup03">
+        <parameter name="number" value="3"/>
+        <classes>
+            <class name="com.softserve.edu.BracketsCheckTest">
+                <methods>
+                    <include name="testBracketsNegative"/>
+                </methods>
+            </class>
+            <class name="com.softserve.edu.CalcTest">
+                <methods>
+                    <include name="checkAdd2"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+
 </suite> <!-- Suite -->

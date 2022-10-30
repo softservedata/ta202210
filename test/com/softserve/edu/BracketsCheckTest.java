@@ -1,24 +1,27 @@
 package com.softserve.edu;
 
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.testng.*;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 
 public class BracketsCheckTest {
-    @ParameterizedTest
-    @ValueSource (strings = {"())",")(","(()"})
-    public void testBracketsNegative(String strings){
-        BracketsCheck br = new BracketsCheck();
-        Assert.assertEquals(false, br.verifyBrackets(strings));
+
+    @DataProvider (name = "brackets")
+    public static Object [][] bracketSet(){
+        return new Object[][] {
+                {"())", false}, {")(", false}, {"(()", false},
+                {"()", true}, {"(())", true}, {"(())()", true}
+        };
     }
 
-    @ParameterizedTest
-    @ValueSource(strings = {"()","(())","(())()"})
-    public void testBrackets(String strings){
+
+    @Test (dataProvider = "brackets" )
+    public void testBracketsNegative(String strings, boolean value){
         BracketsCheck br = new BracketsCheck();
-        Assert.assertEquals(true, br.verifyBrackets(strings));
+        Assert.assertEquals(value, br.verifyBrackets(strings));
     }
+
 
 }
