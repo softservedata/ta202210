@@ -34,4 +34,19 @@
         </classes>
     </test> <!-- Test -->
 
+    <!-- 3 ERROR 5 WARNING 7 INFO 9 DEBUG -->
+    <test verbose="9" name="TestGroup03">
+        <parameter name="number" value="2"/>
+        <classes>
+            <class name="com.softserve.edu.CalcTest">
+                <methods>
+                    <include name="checkAdd1"/>
+                    <include name="checkAdd2"/>
+                    <include name="checkDiv1"/>
+                    <include name="checkDiv2"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+
 </suite> <!-- Suite -->
