@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite01">
+
+    <test verbose="9" name="TestGroup01">
+        <parameter name="number" value="2"/>
+        <classes>
+            <!--            <class name="com.softserve.edu03.mockito.ProductUnitTest"/>-->
+            <class name="com.softserve.edu.CalcTest">
+                <methods>
+                    <include name="firstCheck"/>
+                    <!--             <include name="testApp2" />-->
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+
+    <!-- 3 ERROR 5 WARNING 7 INFO 9 DEBUG -->
+    <test verbose="9" name="TestGroup02">
+        <parameter name="number" value="2"/>
+        <classes>
+            <class name="com.softserve.edu.CalcTest">
+                <methods>
+                    <include name="checkAdd1"/>
+                </methods>
+            </class>
+            <class name="com.softserve.edu.CalcTest">
+                <methods>
+                    <include name="checkAdd2"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+
+    <test verbose="9" name="TestGroup03">
+        <parameter name="number" value="3"/>
+        <classes>
+            <class name="com.softserve.edu.BracketsTest">
+                <methods>
+                    <include name="testOne"/>
+                    <include name="testTwo"/>
+                    <include name="testThree"/>
+                    <include name="testFour"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+
+</suite> <!-- Suite -->
