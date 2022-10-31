@@ -1,11 +1,10 @@
 package test.java.com.softserve.edu;
 
 import main.java.com.softserve.edu.Calc;
-import org.junit.Assert;
-import org.junit.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class CalcTest {
-
     //@Test
     public void firstCheck() {
         //

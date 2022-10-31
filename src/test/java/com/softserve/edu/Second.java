@@ -1,4 +1,4 @@
-package com.softserve.edu;
+package test.java.com.softserve.edu;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
