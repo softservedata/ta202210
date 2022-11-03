@@ -279,12 +279,12 @@
             </surefire.application.password>
           </systemPropertyVariables>
           <reportsDirectory>${testng.reports.directory}</reportsDirectory>
-          <suiteXmlFiles>
+          <!--<suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>
-            <!-- <suiteXmlFile>testng2.xml</suiteXmlFile> -->
-            <!-- <suiteXmlFile>testng.xml</suiteXmlFile> -->
-<!--            <suiteXmlFile>testng03par.xml</suiteXmlFile>-->
-          </suiteXmlFiles>
+            &lt;!&ndash; <suiteXmlFile>testng2.xml</suiteXmlFile> &ndash;&gt;
+            &lt;!&ndash; <suiteXmlFile>testng.xml</suiteXmlFile> &ndash;&gt;
+&lt;!&ndash;            <suiteXmlFile>testng03par.xml</suiteXmlFile>&ndash;&gt;
+          </suiteXmlFiles>-->
           <!--
           <argLine>
               -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
