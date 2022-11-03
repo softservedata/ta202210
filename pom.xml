@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.softserve.edu</groupId>
-  <artifactId>ta202210testng</artifactId>
+  <artifactId>ta202210mock</artifactId>
   <version>1.0</version>
 
   <packaging>jar</packaging>
@@ -281,10 +281,10 @@
           </systemPropertyVariables>
           <reportsDirectory>${testng.reports.directory}</reportsDirectory>
           <suiteXmlFiles>
-<!--            <suiteXmlFile>testng.xml</suiteXmlFile>-->
+            <suiteXmlFile>testng.xml</suiteXmlFile>
             <!-- <suiteXmlFile>testng2.xml</suiteXmlFile> -->
             <!-- <suiteXmlFile>testng.xml</suiteXmlFile> -->
-            <suiteXmlFile>testng03par.xml</suiteXmlFile>
+<!--            <suiteXmlFile>testng03par.xml</suiteXmlFile>-->
           </suiteXmlFiles>
           <!--
           <argLine>
