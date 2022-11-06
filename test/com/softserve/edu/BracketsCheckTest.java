@@ -39,15 +39,22 @@ public class BracketsCheckTest {
         Assert.assertEquals(value, br.verifyBracketsEquity(strings));
     }
 
-    @Test(testName = "hw#3", description = "count the number of brackets",
+    @Test(description = "count the number of brackets",
     dataProvider = "testBracketsNum")
     public void numberBracketsTest(String strings, int num){
+//        br = spy(BracketsCheck.class);
+//        when(br.verifyBracketsEquity(anyString())).thenReturn(true);
+        Assert.assertEquals(num, br.numberBrackets(strings));
+    }
+
+    @Test (testName = "hw#3", description = "count the number of brackets with the mock equty method")
+    public void numberBracketsTest (){
         br = spy(BracketsCheck.class);
         when(br.verifyBracketsEquity(anyString())).thenReturn(true);
-        int number = br.numberBrackets(strings);
-        System.out.println(strings);
-        System.out.println(num);
-        Assert.assertEquals(num, br.numberBrackets(strings));
+        Assert.assertEquals(4, br.numberBrackets("()(("));
+        Assert.assertEquals(5, br.numberBrackets("(()(("));
+        Assert.assertEquals(1, br.numberBrackets(")"));
+        Assert.assertEquals(3, br.numberBrackets("((("));
     }
 
 
