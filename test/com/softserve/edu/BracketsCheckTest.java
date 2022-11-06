@@ -1,26 +1,53 @@
 package com.softserve.edu;
 
 import org.testng.*;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.*;
 
 
 public class BracketsCheckTest {
+    BracketsCheck br;
 
-    @DataProvider (name = "brackets")
+    @BeforeClass
+    public void setup(){
+         br = new BracketsCheck();
+    }
+
+    @DataProvider (name = "testbracketsvalid")
     public static Object [][] bracketSet(){
         return new Object[][] {
                 {"())", false}, {")(", false}, {"(()", false},
-                {"()", true}, {"(())", true}, {"(())()", true}
+                {"()", true}, {"(())", true}, {"(())()", true},{"(1(name))(a)", true}
+        };
+    }
+
+    @DataProvider (name = "testBracketsNum")
+    public static Object [][] bracketNum(){
+        return new Object[][]{
+                {"()()", 4}, {"(()())", 6}, {"((()))()()", 10}
         };
     }
 
 
-    @Test (dataProvider = "brackets" )
-    public void testBracketsNegative(String strings, boolean value){
-        BracketsCheck br = new BracketsCheck();
-        Assert.assertEquals(value, br.verifyBrackets(strings));
+    @Test (testName = "hw2", description = "verify the brackets",
+            dataProvider = "testbracketsvalid" )
+    public void testbracketsvalid(String strings, boolean value){
+        Assert.assertEquals(value, br.verifyBracketsEquity(strings));
+    }
+
+    @Test(testName = "hw#3", description = "count the number of brackets",
+    dataProvider = "testBracketsNum")
+    public void numberBracketsTest(String strings, int num){
+        br = spy(BracketsCheck.class);
+        when(br.verifyBracketsEquity(anyString())).thenReturn(true);
+        int number = br.numberBrackets(strings);
+        System.out.println(strings);
+        System.out.println(num);
+        Assert.assertEquals(num, br.numberBrackets(strings));
     }
 
 

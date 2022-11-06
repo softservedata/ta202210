@@ -4,50 +4,46 @@
 <suite name="Suite01">
 
     <!-- 3 ERROR 5 WARNING 7 INFO 9 DEBUG -->
-    <test verbose="9" name="TestGroup01">
-        <parameter name="number" value="2"/>
-        <classes>
-            <!--            <class name="com.softserve.edu03.mockito.ProductUnitTest"/>-->
-            <class name="com.softserve.edu.CalcTest">
-                <methods>
-                    <include name="firstCheck"/>
-                    <!--             <include name="testApp2" />-->
-                </methods>
-            </class>
-        </classes>
-    </test> <!-- Test -->
+<!--    <test verbose="9" name="TestGroup01">-->
+<!--        <parameter name="number" value="2"/>-->
+<!--        <classes>-->
+<!--            &lt;!&ndash;            <class name="com.softserve.edu03.mockito.ProductUnitTest"/>&ndash;&gt;-->
+<!--            <class name="com.softserve.edu.CalcTest">-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
 
     <!-- 3 ERROR 5 WARNING 7 INFO 9 DEBUG -->
     <test verbose="9" name="TestGroup02">
         <parameter name="number" value="2"/>
         <classes>
-            <class name="com.softserve.edu.CalcTest">
-                <methods>
-                    <include name="checkAdd1"/>
-                </methods>
-            </class>
-            <class name="com.softserve.edu.CalcTest">
-                <methods>
-                    <include name="checkAdd2"/>
-                </methods>
-            </class>
+<!--            <class name="com.softserve.edu.CalcTest"/>-->
+<!--                <methods>-->
+<!--                    <include name="checkAdd1"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="com.softserve.edu.CalcTest">-->
+<!--                <methods>-->
+<!--                    <include name="checkAdd2"/>-->
+<!--                </methods>-->
+            <class name="com.softserve.edu.BracketsCheckTest"/>
         </classes>
     </test> <!-- Test -->
 
-    <test verbose="9" name="TestGroup03">
-        <parameter name="number" value="3"/>
-        <classes>
-            <class name="com.softserve.edu.BracketsCheckTest">
-                <methods>
-                    <include name="testBracketsNegative"/>
-                </methods>
-            </class>
-            <class name="com.softserve.edu.CalcTest">
-                <methods>
-                    <include name="checkAdd2"/>
-                </methods>
-            </class>
-        </classes>
-    </test> <!-- Test -->
+<!--    <test verbose="9" name="TestGroup03">-->
+<!--        <parameter name="number" value="3"/>-->
+<!--        <classes>-->
+<!--            <class name="com.softserve.edu.BracketsCheckTest">-->
+<!--                <methods>-->
+<!--                    <include name="testBracketsValid"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="com.softserve.edu.CalcTest">-->
+<!--                <methods>-->
+<!--                    <include name="checkAdd2"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
 
 </suite> <!-- Suite -->
