@@ -36,7 +36,7 @@
     <test verbose="9" name="TestGroup03">
         <parameter name="number" value="3"/>
         <classes>
-            <class name="com.softserve.edu.BracketsTest">
+            <class name="com.softserve.edu.hw03.BracketsTest">
                 <methods>
                     <include name="testOne"/>
                     <include name="testTwo"/>
