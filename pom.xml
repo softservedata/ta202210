@@ -237,6 +237,11 @@
             <version>1.9.9.1</version>
             <!-- <scope>test</scope> -->
         </dependency>
+        <dependency>
+            <groupId>org.apache.maven.surefire</groupId>
+            <artifactId>surefire-testng</artifactId>
+            <version>3.0.0-M3</version>
+        </dependency>
 
     </dependencies>
 
