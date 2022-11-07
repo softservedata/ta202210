@@ -66,12 +66,8 @@ public class VerifyBracketsQtyTest {
         Assert.assertEquals(actualQty, expectedQty, actualQty + " should be equal to " + expectedQty);
     }
 
-    @Test
-
-
     @AfterClass(alwaysRun = true)
     public void resetConfigs() {
         System.out.println("Cleaning up after ...");
     }
-
 }
