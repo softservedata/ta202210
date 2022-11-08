@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.softserve.edu</groupId>
-  <artifactId>ta202210</artifactId>
+  <artifactId>ta202210selen</artifactId>
   <version>1.0</version>
 
   <packaging>jar</packaging>
@@ -166,14 +166,14 @@
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
 <!--      <version>4.1.4</version>-->
-      <version>4.5.0</version>
+      <version>4.6.0</version>
       <scope>test</scope>
     </dependency>
 
     <dependency>
       <groupId>io.github.bonigarcia</groupId>
       <artifactId>webdrivermanager</artifactId>
-      <version>5.3.0</version>
+      <version>5.3.1</version>
       <!--            <version>4.4.3</version>-->
       <scope>test</scope>
     </dependency>
