@@ -1,8 +1,5 @@
 package com.softserve.edu;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class VerifyBrackets {
 
     public static boolean verifyBrackets(String exp) {
@@ -61,6 +58,6 @@ public class VerifyBrackets {
                 System.out.println("Balanced");
             else
                 System.out.println("Not Balanced");*/
-        }
-    }
+        /*}*/
+   /* }*/
 }

@@ -26,8 +26,9 @@ public class Brackets {
     }
 
     public int numberBrackets(String text) {
+        int count = 0;
         if (verifyBrackets(text)) {
-            int count = 0;
+
             for (int i = 0; i < text.length(); i++) {
                 char current = text.charAt(i);
                 if (current == '(' || current == ')') {
@@ -36,8 +37,7 @@ public class Brackets {
             }
 
         } else throw new RuntimeException("oops");
-
-        return 0;
+        return count;
     }
 }
 
