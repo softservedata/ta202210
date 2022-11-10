@@ -37,7 +37,7 @@ public class FirstTest {
         System.out.println("\t\t@BeforeClass FirstTest");
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void afterClass() {
         System.out.println("\t\t@AfterClass FirstTest");
     }
@@ -50,6 +50,7 @@ public class FirstTest {
     @AfterMethod
     public void afterMethod() {
         System.out.println("\t\t\t@AfterMethod FirstTest");
+        //throw new RuntimeException("Hi");
     }
 
     @Test
