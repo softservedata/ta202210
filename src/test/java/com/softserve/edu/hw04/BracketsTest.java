@@ -1,4 +1,4 @@
-package com.softserve.edu.hw03;
+package com.softserve.edu.hw04;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
