@@ -1,4 +1,4 @@
-package com.softserve.homework7;
+package com.softserve.homework07;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
