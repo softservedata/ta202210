@@ -14,7 +14,7 @@ public class HomeWork07 {
 
 
     @Test
-    public void checkMac() {
+    public void checkLogin() {
         WebDriverManager.chromedriver().setup();
         //
         WebDriver driver = new ChromeDriver();
