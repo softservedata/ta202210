@@ -18,7 +18,7 @@ public class BracketsParamTest {
 
     @Test(dataProvider = "validDataProvider")
     public void BracketsTest(String text, boolean expectResult) {
-        boolean result = Brackets.verifyBrackets(text);
+        boolean result = (new Brackets()).verifyBrackets(text);
         Assert.assertEquals(result, expectResult);
         System.out.println("+++done ID= " + Thread.currentThread().getId());
     }

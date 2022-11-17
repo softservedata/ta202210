@@ -1,7 +1,5 @@
 package com.softserve.edu.homework03;
 
-import java.util.Scanner;
-
 public class Brackets {
 
     public boolean verifyBrackets(String text) {
@@ -22,6 +20,21 @@ public class Brackets {
         System.out.println(result);
         return result;
     }
+
+    public int numberBrackets(String text){
+        RuntimeException e = new RuntimeException("Incorrect brackets");
+        if (verifyBrackets(text) == false){
+            throw e;
+        };
+        int bracketsCount = 0;
+        for (int i = 0; i < text.length(); i++){
+            char currentChar = text.charAt(i);
+            if (currentChar == '(' || currentChar == ')'){
+                    bracketsCount = bracketsCount + 1;
+            }
+        };
+        System.out.println(bracketsCount);
+        return bracketsCount;
+    };
+
 }
-
-
