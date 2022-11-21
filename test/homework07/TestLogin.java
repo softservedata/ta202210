@@ -15,6 +15,7 @@ import org.testng.log4testng.Logger;
 
 import javax.xml.soap.SAAJResult;
 import java.time.Duration;
+import java.util.List;
 
 public class TestLogin {
     private  static Logger logger = Logger.getLogger(TestLogin.class);
@@ -57,6 +58,7 @@ public class TestLogin {
         Assert.assertEquals(driver.findElement(By.cssSelector("div#content > h2:nth-of-type(3)")).getText(),
                 "Newsletter");
     }
+
 
     @AfterMethod (alwaysRun = true)
     public static void afterMethod(ITestResult result) {
