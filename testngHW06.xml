@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite06">
+
+    <test verbose="9" name="TestGroup01">
+        <classes>
+            <class name="com.softserve.edu.homework06.FindIphone"/>
+        </classes>
+    </test> <!-- Test -->
+
+</suite> <!-- Suite -->
