@@ -89,11 +89,12 @@ public class ScrolleTest {
         Thread.sleep(2000); // For Presentation Only
         //
         WebElement linkProject = driver.findElement(By.cssSelector("a[href='https://www.perfecto.io/']"));
-        //
-        /* // Scrolling by Action class
-         * Actions action = new Actions(driver);
-         * action.moveToElement(linkProject).perform();
-         * Thread.sleep(2000); // For Presentation Only */
+        /*
+        // Scrolling by Action class
+         Actions action = new Actions(driver);
+         action.moveToElement(linkProject).perform();
+         Thread.sleep(2000); // For Presentation Only
+        */
         // /*-
         // Scrolling by JavaScript injection
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", linkProject);
@@ -108,14 +109,21 @@ public class ScrolleTest {
         System.out.println("browserstack.isEnabled() = " + browserstack.isEnabled());
         System.out.println("browserstack.isSelected() = " + browserstack.isSelected());
         //
-        driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-        /*-
+        // browserstack.click(); //ERROR
+        //
+        //driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
+        // /*-
         //        WebElement browserstack2 = (new WebDriverWait(driver, 10))
         //            .until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href*='www.browserstack.com']")));
-        WebElement browserstack2 = (new WebDriverWait(driver, 10))
+//        WebElement browserstack2 = (new WebDriverWait(driver, Duration.ofSeconds(10)))
+//                .until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href*='www.browserstack.com']")));
+        //
+        WebElement browserstack2 = (new WebDriverWait(driver, Duration.ofSeconds(10)))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href*='www.browserstack.com']")));
+        //
          browserstack2.click();
-        */
+        // */
         /*
         //int count = 0;
         (new WebDriverWait(driver, 10)).until(new 
