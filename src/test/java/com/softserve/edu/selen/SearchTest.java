@@ -42,6 +42,7 @@ public class SearchTest {
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+            // Use Custom Exception
         }
     }
 
@@ -138,7 +139,7 @@ public class SearchTest {
         return result;
     }
 
-    @Test
+    //@Test
     public void findByCss() {
         // Precondition
         WebElement usd = driver.findElement(By.cssSelector("button[name='USD']"));
@@ -193,7 +194,7 @@ public class SearchTest {
         presentationSleep(); // For Presentation ONLY
     }
 
-    //@Test
+    @Test
     public void findByXPath() {
         // Precondition
         // Choose Curency
@@ -205,7 +206,8 @@ public class SearchTest {
         // Steps
         // Type Search Field
         driver.findElement(By.xpath("//input[@name='search']")).click();
-        driver.findElement(By.xpath("//input[@name='search']")).clear();
+        //driver.findElement(By.xpath("//input[@name='search']")).clear();
+        driver.findElement(By.xpath("//input[@placeholder='Search']")).clear();
         driver.findElement(By.xpath("//input[@name='search']")).sendKeys("mac");
         presentationSleep(); // For Presentation ONLY
         //
@@ -214,13 +216,15 @@ public class SearchTest {
         presentationSleep(); // For Presentation ONLY
         //
         // $x("//a[text()='MacBook']/../..//p[contains(text(),'602')]")
-        WebElement price = driver.findElement(By
-                .xpath("//a[text()='MacBook']/../following-sibling::p[@class='price']"));
+        // "//a[text()='MacBook']/../../p[@class]"
+        // "//a[text()='MacBook']/../following-sibling::p[@class='price']"
+        WebElement price = driver.findElement(By.xpath("//a[text()='MacBook']/../following-sibling::p[@class='price']"));
         // Scrolling by Action class
         Actions action = new Actions(driver);
         action.moveToElement(price).perform();
         presentationSleep(); // For Presentation ONLY
         // Check
+        System.out.println("price.getText() = " + price.getText());
         Assert.assertTrue(price.getText().contains("$602.00"));
         //
         // Return to Previous State
