@@ -1,4 +1,4 @@
-package com.softserve.edu.hw8;
+package com.softserve.edu.hw9;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Homework8 {
+public class Homework9 {
     private static final String BASE_URL = "http://taqc-opencart.epizy.com/";
     public static WebDriver driver;
     private static final Long IMPLICITLY_WAIT_SECONDS = 10L;
