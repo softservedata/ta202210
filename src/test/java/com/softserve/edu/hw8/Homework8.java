@@ -18,12 +18,12 @@ public class Homework8 {
     private static final Long IMPLICITLY_WAIT_SECONDS = 10L;
 
     @BeforeClass
-    public static void driverSetup(){
+    public static void driverSetup() {
         WebDriverManager.chromedriver().setup();
     }
 
     @Before
-    public void testStart(){
+    public void testStart() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(BASE_URL);
@@ -31,25 +31,23 @@ public class Homework8 {
     }
 
     @Test
-    public void userLogin () {
+    public void userLogin() {
 
-        public void userLogin () {
+        driver.findElement(By.cssSelector("form[id='form-currency'")).click();
+        driver.findElement(By.cssSelector("button[name='USD'")).click();
+        driver.findElement(By.cssSelector("button[onclick*='43']")).click();
+        driver.findElement(By.cssSelector("button[onclick*='40']")).click();
+        driver.findElement(By.cssSelector("div[id='cart']")).click();
 
-            driver.findElement(By.cssSelector("form[id='form-currency'")).click();
-            driver.findElement(By.cssSelector("button[name='USD'")).click();
-            driver.findElement(By.cssSelector("button[onclick*='43']")).click();
-            driver.findElement(By.cssSelector("button[onclick*='40']")).click();
-            driver.findElement(By.cssSelector("div[id='cart']")).click();
-
-            WebElement iPhone = driver.findElement(By.cssSelector("#cart > ul > li:nth-child(1) > table > tbody > tr:nth-child(1) > td.text-left > a"));
-            Assert.assertEquals("iPhone 3", iPhone.getText());
-            WebElement MacBook = driver.findElement(By.cssSelector("#cart > ul > li:nth-child(1) > table > tbody > tr:nth-child(2) > td.text-left > a"));
-            Assert.assertEquals("MacBook", MacBook.getText());
-            WebElement item1Price = driver.findElement(By.cssSelector("#cart > ul > li:nth-child(1) > table > tbody > tr:nth-child(1) > td:nth-child(4)"));
-            Assert.assertEquals("$123.20", item1Price.getText());
-            WebElement item2Price = driver.findElement(By.cssSelector("#cart > ul > li:nth-child(1) > table > tbody > tr:nth-child(2) > td:nth-child(4)"));
-            Assert.assertEquals("$602.00", item2Price.getText());
-            driver.close();
+        WebElement iPhone = driver.findElement(By.cssSelector("#cart > ul > li:nth-child(1) > table > tbody > tr:nth-child(1) > td.text-left > a"));
+        Assert.assertEquals("iPhone 3", iPhone.getText());
+        WebElement MacBook = driver.findElement(By.cssSelector("#cart > ul > li:nth-child(1) > table > tbody > tr:nth-child(2) > td.text-left > a"));
+        Assert.assertEquals("MacBook", MacBook.getText());
+        WebElement item1Price = driver.findElement(By.cssSelector("#cart > ul > li:nth-child(1) > table > tbody > tr:nth-child(1) > td:nth-child(4)"));
+        Assert.assertEquals("$123.20", item1Price.getText());
+        WebElement item2Price = driver.findElement(By.cssSelector("#cart > ul > li:nth-child(1) > table > tbody > tr:nth-child(2) > td:nth-child(4)"));
+        Assert.assertEquals("$602.00", item2Price.getText());
+        driver.close();
 
     }
 
