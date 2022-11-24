@@ -25,9 +25,8 @@ public class HomeWork08 {
 
     private void presentationSleep(int seconds) {
         try {
-            Thread.sleep(seconds * ONE_SECOND_DELAY); // For Presentation ONLY
+            Thread.sleep(seconds * ONE_SECOND_DELAY);
         } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
