@@ -110,6 +110,7 @@ public class ScrolleTest {
         System.out.println("browserstack.isSelected() = " + browserstack.isSelected());
         //
         // browserstack.click(); //ERROR
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", browserstack);
         //
         //driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
@@ -119,14 +120,14 @@ public class ScrolleTest {
 //        WebElement browserstack2 = (new WebDriverWait(driver, Duration.ofSeconds(10)))
 //                .until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href*='www.browserstack.com']")));
         //
-        WebElement browserstack2 = (new WebDriverWait(driver, Duration.ofSeconds(10)))
-                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href*='www.browserstack.com']")));
+//        WebElement browserstack2 = (new WebDriverWait(driver, Duration.ofSeconds(10)))
+//                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[href*='www.browserstack.com']")));
         //
-         browserstack2.click();
+//         browserstack2.click();
         // */
         /*
         //int count = 0;
-        (new WebDriverWait(driver, 10)).until(new 
+        (new WebDriverWait(driver, Duration.ofSeconds(10))).until(new
                 ExpectedCondition<Boolean>() {
                     public Boolean apply(WebDriver driver) {
                         count++;
