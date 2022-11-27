@@ -157,6 +157,6 @@ public class ScrolleTest {
         */
         //
         //        browserstack.click(); // Error if Scrolling by JavaScript
-        Thread.sleep(4000); // For Presentation Only
+        Thread.sleep(4000); // For Presentation Only.
     }
 }
