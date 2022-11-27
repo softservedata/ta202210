@@ -108,6 +108,7 @@ public class ScrolleTest {
         System.out.println("browserstack.isDisplayed() = " + browserstack.isDisplayed());
         System.out.println("browserstack.isEnabled() = " + browserstack.isEnabled());
         System.out.println("browserstack.isSelected() = " + browserstack.isSelected());
+        Thread.sleep(2000); // For Presentation Only
         //
         // browserstack.click(); //ERROR
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", browserstack);
