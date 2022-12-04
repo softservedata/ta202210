@@ -14,7 +14,7 @@ public class DriverFactory {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
 
-            return new ChromeDriver();
+            return new ChromeDriver(options);
 
         }
         else {System.setProperty("webdriver.edge.driver",
