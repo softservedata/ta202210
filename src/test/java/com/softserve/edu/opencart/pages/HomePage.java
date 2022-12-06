@@ -13,7 +13,7 @@ public class HomePage extends TopPart {
     //
     private WebElement slideshow0;
     //
-    //private ProductsContainer productsContainer;
+    private ProductsContainer productsContainer;
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -24,7 +24,7 @@ public class HomePage extends TopPart {
         // init elements
         slideshow0 = driver.findElement(By.id("slideshow0"));
         //
-        //productsContainer = new ProductsContainer(driver);
+        productsContainer = new ProductsContainer(driver);
         //productsContainer = new ProductsContainer();
     }
 
@@ -54,9 +54,9 @@ public class HomePage extends TopPart {
     }
 
     // productComponentsContainer
-//    public ProductsContainer getProductComponentsContainer() {
-//        return productsContainer;
-//    }
+    public ProductsContainer getProductComponentsContainer() {
+        return productsContainer;
+    }
 
     // Functional
 
