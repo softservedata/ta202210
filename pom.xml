@@ -173,8 +173,8 @@
     <dependency>
       <groupId>io.github.bonigarcia</groupId>
       <artifactId>webdrivermanager</artifactId>
-      <version>5.3.0</version>
-      <!--            <version>4.4.3</version>-->
+<!--      <version>5.3.0</version>-->
+                  <version>4.4.3</version>
       <scope>test</scope>
     </dependency>
 
@@ -241,7 +241,7 @@
     <dependency>
       <groupId>io.github.bonigarcia</groupId>
       <artifactId>webdrivermanager</artifactId>
-      <version>5.3.1</version>
+      <version>4.4.3</version>
       <scope>compile</scope>
     </dependency>
       <dependency>
