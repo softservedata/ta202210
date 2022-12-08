@@ -1,6 +1,6 @@
-package com.softserve.edu.homework12;
+package com.softserve.edu.homework12and13.tests;
 
-import com.softserve.edu.homework12.pages.HomePage;
+import com.softserve.edu.homework12and13.pages.HomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,19 +16,19 @@ public abstract class TestRunnerFirst {
     private WebDriver driver;
 
     // Overload
-//    protected void presentationSleep() {
-//        presentationSleep(1);
-//    }
+    protected void presentationSleep() {
+        presentationSleep(1);
+    }
 
     // Overload
-//    protected void presentationSleep(int seconds) {
-//        try {
-//            Thread.sleep(seconds * ONE_SECOND_DELAY); // For Presentation ONLY
-//        } catch (InterruptedException e) {
-//            // TODO Auto-generated catch block
-//            e.printStackTrace();
-//        }
-//    }
+    protected void presentationSleep(int seconds) {
+        try {
+            Thread.sleep(seconds * ONE_SECOND_DELAY); // For Presentation ONLY
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
 
     @BeforeSuite
     public void beforeSuite() {
@@ -60,12 +60,12 @@ public abstract class TestRunnerFirst {
         loadApplication();
     }
 
-//    @AfterMethod
-//    public void afterMethod() {
-//        presentationSleep(); // For Presentation ONLY
-//        // logout; clear cache; delete cookie; delete session;
-//        // Save Screen;
-//    }
+    @AfterMethod
+    public void afterMethod() {
+        presentationSleep(); // For Presentation ONLY
+        // logout; clear cache; delete cookie; delete session;
+        // Save Screen;
+    }
 
     protected HomePage loadApplication() {
         driver.get(BASE_URL);

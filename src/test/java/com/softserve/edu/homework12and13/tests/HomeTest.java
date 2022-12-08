@@ -1,6 +1,6 @@
-package com.softserve.edu.homework12;
+package com.softserve.edu.homework12and13.tests;
 
-import com.softserve.edu.homework12.pages.HomePage;
+import com.softserve.edu.homework12and13.pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

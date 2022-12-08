@@ -1,4 +1,4 @@
-package com.softserve.edu.homework12.pages;
+package com.softserve.edu.homework12and13.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
