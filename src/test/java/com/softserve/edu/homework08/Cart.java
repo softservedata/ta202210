@@ -41,6 +41,8 @@ public class Cart {
     public void beforeMethod(){
         //Navigate to website
         driver.get(BASE_URL);
+        //Mazimize current window
+        driver.manage().window().maximize();
     }
 
     @AfterMethod
