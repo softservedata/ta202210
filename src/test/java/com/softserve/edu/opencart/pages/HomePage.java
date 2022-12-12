@@ -10,6 +10,8 @@ public class HomePage extends TopPart {
     //
     public static final String EXPECTED_IPHONE6 = "iPhone6";
     public static final String EXPECTED_IPHONE_6 = "iPhone 6";
+    public static final String EXPECTED_IPHONE_3 = "iPhone 3";
+    public static final String EXPECTED_IPHONE_3_PRICE = "$123.20";
     //
     private WebElement slideshow0;
     //
