@@ -1,6 +1,6 @@
-package com.softserve.edu.opencart.tests;
+package com.softserve.edu.hw12.opencart.tests;
 
-import com.softserve.edu.opencart.pages.HomePage;
+import com.softserve.edu.hw12.opencart.pages.HomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

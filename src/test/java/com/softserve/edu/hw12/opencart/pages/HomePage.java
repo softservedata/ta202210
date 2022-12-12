@@ -1,6 +1,6 @@
-package com.softserve.edu.opencart.pages;
+package com.softserve.edu.hw12.opencart.pages;
 
-import com.softserve.edu.opencart.data.Currencies;
+import com.softserve.edu.hw12.opencart.data.Currencies;
 //import com.softserve.edu.opencart.data.Product;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,8 +8,10 @@ import org.openqa.selenium.WebElement;
 
 public class HomePage extends TopPart {
     //
-    public static final String EXPECTED_IPHONE6 = "iPhone6";
-    public static final String EXPECTED_IPHONE_6 = "iPhone 6";
+    public static final String EXPECTED_IPHONE3 = "iPhone3";
+    public static final String EXPECTED_IPHONE_3 = "iPhone 3";
+
+    public static final String EXPECTED_IPHONE_3_PRICE = "$123.20";
     //
     private WebElement slideshow0;
     //
@@ -37,7 +39,7 @@ public class HomePage extends TopPart {
 
     public WebElement getSlideshow0FirstImage() {
         // return getSlideshow0().findElement(By.cssSelector("a > img"));
-        return getSlideshow0().findElement(By.xpath(".//a/img"));
+        return getSlideshow0().findElement(By.xpath("//*[@id='content']/div[2]/div[2]/div/div[1]/a/img"));
         // return Slideshow0.findElement(By.xpath("//a/img")); // ERROR
         // return driver.findElement(By.xpath("//div[@id='slideshow0']//a/img"));
     }
@@ -51,6 +53,10 @@ public class HomePage extends TopPart {
     }
     public String getSlideshow0FirstImageAttributeAltText() {
         return getSlideshow0FirstImageAttributeText(TAG_ATTRIBUTE_ALT);
+    }
+
+    public String getTextFromProduct(){
+        return getSlideshow0FirstImageAttributeText(TAG_ATTRIBUTE_VALUE);
     }
 
     // productComponentsContainer

@@ -1,4 +1,4 @@
-package com.softserve.edu.testng;
+package com.softserve.edu.hw12.opencart.testng;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;

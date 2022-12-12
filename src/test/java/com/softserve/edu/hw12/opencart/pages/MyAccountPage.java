@@ -1,4 +1,4 @@
-package com.softserve.edu.opencart.pages;
+package com.softserve.edu.hw12.opencart.pages;
 
 import org.openqa.selenium.WebDriver;
 

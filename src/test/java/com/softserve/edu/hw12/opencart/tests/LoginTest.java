@@ -1,10 +1,10 @@
-package com.softserve.edu.opencart.tests;
+package com.softserve.edu.hw12.opencart.tests;
 
 //import com.softserve.edu.opencart.data.IUser;
 //import com.softserve.edu.opencart.data.UserRepository;
-import com.softserve.edu.opencart.pages.EditAccountPage;
-import com.softserve.edu.opencart.pages.HomePage;
-import com.softserve.edu.opencart.pages.UnsuccessfulLoginPage;
+import com.softserve.edu.hw12.opencart.pages.EditAccountPage;
+import com.softserve.edu.hw12.opencart.pages.HomePage;
+import com.softserve.edu.hw12.opencart.pages.UnsuccessfulLoginPage;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -57,7 +57,7 @@ public class LoginTest extends TestRunnerFirst {
         // Check
         Assert.assertTrue(homePage
                 .getSlideshow0FirstImageAttributeSrcText()
-                .contains(HomePage.EXPECTED_IPHONE6));
+                .contains(HomePage.EXPECTED_IPHONE3));
         presentationSleep();
     }
 
@@ -102,7 +102,7 @@ public class LoginTest extends TestRunnerFirst {
         // Check
         Assert.assertTrue(homePage
                 .getSlideshow0FirstImageAttributeSrcText()
-                .contains(HomePage.EXPECTED_IPHONE6));
+                .contains(HomePage.EXPECTED_IPHONE3));
         presentationSleep();
     }
 
@@ -113,7 +113,7 @@ public class LoginTest extends TestRunnerFirst {
         presentationSleep();
         //
         // Check
-        Assert.assertEquals(homePage.getSlideshow0FirstImageAttributeAltText(), HomePage.EXPECTED_IPHONE_6);
-        Assert.assertTrue(homePage.getSlideshow0FirstImageAttributeSrcText().contains(HomePage.EXPECTED_IPHONE6));
+        Assert.assertEquals(homePage.getSlideshow0FirstImageAttributeAltText(), HomePage.EXPECTED_IPHONE_3);
+        Assert.assertTrue(homePage.getSlideshow0FirstImageAttributeSrcText().contains(HomePage.EXPECTED_IPHONE3));
     }
 }

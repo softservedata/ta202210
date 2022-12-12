@@ -1,6 +1,6 @@
-package com.softserve.edu.opencart.pages;
+package com.softserve.edu.hw12.opencart.pages;
 
-import com.softserve.edu.opencart.data.Currencies;
+import com.softserve.edu.hw12.opencart.data.Currencies;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

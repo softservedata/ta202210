@@ -1,7 +1,7 @@
-package com.softserve.edu.opencart.tests;
+package com.softserve.edu.hw12.opencart.tests;
 
-import com.softserve.edu.opencart.data.Currencies;
-import com.softserve.edu.opencart.pages.HomePage;
+import com.softserve.edu.hw12.opencart.pages.HomePage;
+import com.softserve.edu.hw12.opencart.data.Currencies;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

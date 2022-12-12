@@ -1,4 +1,4 @@
-package com.softserve.edu.opencart.data;
+package com.softserve.edu.hw12.opencart.data;
 
 public enum Currencies {
 	DEFAULT_CURRENCY("US Dollar", "$"),
