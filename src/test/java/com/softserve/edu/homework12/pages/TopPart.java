@@ -1,4 +1,4 @@
-package com.softserve.edu.opencart.pages;
+package com.softserve.edu.homework12.pages;
 
 //import com.softserve.edu.opencart.data.Currencies;
 import org.openqa.selenium.By;

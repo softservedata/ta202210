@@ -1,6 +1,6 @@
-package com.softserve.edu.opencart.tests;
+package com.softserve.edu.homework12;
 
-import com.softserve.edu.opencart.pages.HomePage;
+import com.softserve.edu.homework12.pages.HomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,19 +16,19 @@ public abstract class TestRunnerFirst {
     private WebDriver driver;
 
     // Overload
-    protected void presentationSleep() {
-        presentationSleep(1);
-    }
+//    protected void presentationSleep() {
+//        presentationSleep(1);
+//    }
 
     // Overload
-    protected void presentationSleep(int seconds) {
-        try {
-            Thread.sleep(seconds * ONE_SECOND_DELAY); // For Presentation ONLY
-        } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
+//    protected void presentationSleep(int seconds) {
+//        try {
+//            Thread.sleep(seconds * ONE_SECOND_DELAY); // For Presentation ONLY
+//        } catch (InterruptedException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//    }
 
     @BeforeSuite
     public void beforeSuite() {
@@ -46,7 +46,7 @@ public abstract class TestRunnerFirst {
 
     @AfterClass(alwaysRun = true)
     public void afterClass() {
-        presentationSleep(); // For Presentation ONLY
+//        presentationSleep(); // For Presentation ONLY
         // driver.close();
         if (driver != null) {
             driver.quit();
@@ -55,19 +55,20 @@ public abstract class TestRunnerFirst {
 
     @BeforeMethod
     public void beforeMethod() {
-        driver.get(BASE_URL);
-        presentationSleep(); // For Presentation ONLY
+//        driver.get(BASE_URL);
+//        presentationSleep(); // For Presentation ONLY
+        loadApplication();
     }
 
-    @AfterMethod
-    public void afterMethod() {
-        presentationSleep(); // For Presentation ONLY
-        // logout; clear cache; delete cookie; delete session;
-        // Save Screen;
-    }
+//    @AfterMethod
+//    public void afterMethod() {
+//        presentationSleep(); // For Presentation ONLY
+//        // logout; clear cache; delete cookie; delete session;
+//        // Save Screen;
+//    }
 
     protected HomePage loadApplication() {
-        //driver.get(BASE_URL);
+        driver.get(BASE_URL);
         return new HomePage(driver);
         //return new HomePage(getDriver());
     }
