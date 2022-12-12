@@ -13,8 +13,9 @@ public class HomeTest extends TestRunnerFirst {
         presentationSleep();
         //
         // Check
-        Assert.assertEquals(homePage.getSlideshow0FirstImageAttributeAltText(), HomePage.EXPECTED_IPHONE_6);
-        Assert.assertTrue(homePage.getSlideshow0FirstImageAttributeSrcText().contains(HomePage.EXPECTED_IPHONE6));
+
+        Assert.assertTrue(homePage.getProductComponentsContainer().getProductComponentNames().contains(HomePage.EXPECTED_IPHONE_3));
+        Assert.assertTrue(homePage.getProductComponentsContainer().getProductComponentByName(HomePage.EXPECTED_IPHONE_3).getPriceText().contains(HomePage.EXPECTED_IPHONE_3_PRICE));
     }
 
 }
