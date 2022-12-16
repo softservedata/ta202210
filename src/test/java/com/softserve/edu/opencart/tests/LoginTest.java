@@ -1,7 +1,7 @@
 package com.softserve.edu.opencart.tests;
 
-//import com.softserve.edu.opencart.data.IUser;
-//import com.softserve.edu.opencart.data.UserRepository;
+import com.softserve.edu.opencart.data.IUser;
+import com.softserve.edu.opencart.data.UserRepository;
 import com.softserve.edu.opencart.pages.EditAccountPage;
 import com.softserve.edu.opencart.pages.HomePage;
 import com.softserve.edu.opencart.pages.UnsuccessfulLoginPage;
@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 //public class LoginTest extends TestRunnerFirst {
 public class LoginTest extends TestRunnerFirst {
 
-    // /*
+    /*
     @DataProvider//(parallel = true)
     public Object[][] dataSuccessful() {
         return new Object[][] {
@@ -20,33 +20,33 @@ public class LoginTest extends TestRunnerFirst {
             { "hahaha@gmail.com", "qwerty", "hahaha" },
         };
     }
-    // */
+    */
 
-    /*
-    @DataProvider(parallel = true)
+    // /*
+    @DataProvider//(parallel = true)
     public Object[][] dataSuccessful() {
         return new Object[][] {
-                { UserRepository.getHahaha() },
-                { UserRepository.getAwdrt() },
+                { UserRepository.get().getHahaha() },
+                { UserRepository.get().getAwdrt() },
         };
     }
-    */
+    // */
 
     @Test(dataProvider = "dataSuccessful")
     public void checkSuccessful(String email, String password, String firstName) {
-    //public void checkSuccessful(IUser validUser) {
+//    public void checkSuccessful(IUser validUser) {
         //
         // Steps
         EditAccountPage editAccountPage = loadApplication()
                 .gotoLoginPage()
                 .successfulLogin(email, password)
-                //.successfulLogin(validUser)
+//                .successfulLogin(validUser)
                 .gotoEditAccountRight();
         presentationSleep();
         //
         // Check
         Assert.assertEquals(editAccountPage.getFirstNameFieldText(), firstName);
-        //Assert.assertEquals(editAccountPage.getFirstNameFieldText(), validUser.getFirstname());
+//        Assert.assertEquals(editAccountPage.getFirstNameFieldText(), validUser.getFirstname());
         //
         // Return to Previous State
         HomePage homePage = editAccountPage
@@ -61,7 +61,7 @@ public class LoginTest extends TestRunnerFirst {
         presentationSleep();
     }
 
-    // /*
+    /*
     @DataProvider//(parallel = true)
     public Object[][] dataUnsuccessful() {
         return new Object[][] {
@@ -69,26 +69,26 @@ public class LoginTest extends TestRunnerFirst {
                 { "hah@gmail.com", "qwy" },
         };
     }
-    // */
+    */
 
-    /*
+    // /*
     @DataProvider//(parallel = true)
     public Object[][] dataUnsuccessful() {
         return new Object[][] {
-                { UserRepository.getInvalidUser() },
+                { UserRepository.get().getInvalidUser() },
         };
     }
-    */
+    // */
 
     //@Test(dataProvider = "dataUnsuccessful")
     public void checkUnsuccessful(String emailInvalid, String passwordInvalid) {
-    //public void checkUnsuccessful(IUser invalidUser) {
+//    public void checkUnsuccessful(IUser invalidUser) {
         //
         // Steps
         UnsuccessfulLoginPage unsuccessfulLoginPage = loadApplication()
                 .gotoLoginPage()
                 .unsuccessfulLoginPage(emailInvalid, passwordInvalid);
-                //.unsuccessfulLoginPage(invalidUser);
+//                .unsuccessfulLoginPage(invalidUser);
         presentationSleep();
         //
         // Check
