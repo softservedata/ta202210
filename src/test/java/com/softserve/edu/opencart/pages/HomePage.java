@@ -1,7 +1,7 @@
 package com.softserve.edu.opencart.pages;
 
-//import com.softserve.edu.opencart.data.Currencies;
 //import com.softserve.edu.opencart.data.Product;
+import com.softserve.edu.opencart.data.Currencies;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -66,13 +66,13 @@ public class HomePage extends TopPart {
     // Business Logic
 
     //public HomePage chooseCurrency(String currency) {
-//    public HomePage chooseCurrency(Currencies currency) {
+   public HomePage chooseCurrency(Currencies currency) {
 //        //logger.debug("start chooseCurrency() with currency = " + currency.toString());
-//        clickCurrencyByPartialName(currency);
+        clickCurrencyByPartialName(currency);
 //        //logger.debug("end chooseCurrency() with currency = " + currency.toString());
-//        return new HomePage(driver);
+       return new HomePage(driver);
 //        //return new HomePage();
-//    }
+    }
 
 //    public HomePage scrollToProduct(Product product) {
 //        WebElement webElement = getProductComponentsContainer()

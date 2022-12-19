@@ -1,6 +1,6 @@
 package com.softserve.edu.opencart.pages;
 
-//import com.softserve.edu.opencart.data.Currencies;
+import com.softserve.edu.opencart.data.Currencies;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -30,9 +30,9 @@ public abstract class TopPart {
 
     // List<MenuComponent> menu;
     //
-    //private DropdownComponent dropdownComponent;
-    //private GuestDropdown dropdownGuest;
-    //private LoggedDropdown dropdownLogged;
+    private DropdownComponent dropdownComponent;
+    private GuestDropdown dropdownGuest;
+    private LoggedDropdown dropdownLogged;
 
     public TopPart(WebDriver driver) {
         this.driver = driver;
@@ -159,8 +159,6 @@ public abstract class TopPart {
         getCartButton().click();
     }
 
-
-    /*
     // dropdownComponent
     protected DropdownComponent getDropdownComponent() {
         //LeaveUtils.castExceptionByCondition(dropdownOptions == null, OPTION_NULL_MESSAGE);
@@ -191,6 +189,7 @@ public abstract class TopPart {
         clickSearchTopField();
         dropdownComponent = null;
     }
+
     // dropdownGuest
     protected GuestDropdown getDropdownGuest() {
         if (dropdownGuest == null) {
@@ -251,14 +250,11 @@ public abstract class TopPart {
         clickSearchTopField();
         dropdownLogged = null;
     }
-    */
 
     // menu // TODO
 
     // Functional
 
-
-    /*
     // currency
     private void openCurrencyDropdownComponent() {
         clickSearchTopField();
@@ -272,8 +268,6 @@ public abstract class TopPart {
         //clickDropdownComponentByPartialName(currencyName);
         clickDropdownComponentByPartialName(optionName.toString());
     }
-    */
-
 
 
 
@@ -303,7 +297,7 @@ public abstract class TopPart {
         return new HomePage(driver);
     }
 
-    /*
+
     // dropdownGuest
     public LoginPage gotoLoginPage() {
         openMyAccountDropdown();
@@ -323,6 +317,6 @@ public abstract class TopPart {
         clickDropdownLoggedLogout();
         return new AccountLogoutPage(driver);
     }
-    */
+
 
 }
