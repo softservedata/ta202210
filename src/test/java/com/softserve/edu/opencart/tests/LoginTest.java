@@ -5,6 +5,7 @@ import com.softserve.edu.opencart.data.UserRepository;
 import com.softserve.edu.opencart.pages.EditAccountPage;
 import com.softserve.edu.opencart.pages.HomePage;
 import com.softserve.edu.opencart.pages.UnsuccessfulLoginPage;
+import com.softserve.edu.opencart.tools.ListUtils;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -22,7 +23,7 @@ public class LoginTest extends TestRunnerFirst {
     }
     */
 
-    // /*
+    /*
     @DataProvider//(parallel = true)
     public Object[][] dataSuccessful() {
         return new Object[][] {
@@ -30,7 +31,13 @@ public class LoginTest extends TestRunnerFirst {
                 { UserRepository.get().getAwdrt() },
         };
     }
-    // */
+    */
+
+    @DataProvider//(parallel = true)
+    public Object[][] dataSuccessful() {
+        return ListUtils.toMultiArray(UserRepository.get().fromCsv());
+        //return ListUtils.toMultiArray(UserRepository.get().fromExcel());
+    }
 
     @Test(dataProvider = "dataSuccessful")
     //public void checkSuccessful(String email, String password, String firstName) {
