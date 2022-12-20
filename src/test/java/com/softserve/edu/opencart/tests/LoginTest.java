@@ -11,7 +11,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 //public class LoginTest extends TestRunnerFirst {
-public class LoginTest extends TestRunnerFirst {
+public class LoginTest extends TestRunnerStrategy {
 
     /*
     @DataProvider//(parallel = true)
