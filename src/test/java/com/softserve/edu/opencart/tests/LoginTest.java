@@ -42,6 +42,7 @@ public class LoginTest extends TestRunnerStrategy {
     @Test(dataProvider = "dataSuccessful")
     //public void checkSuccessful(String email, String password, String firstName) {
     public void checkSuccessful(IUser validUser) {
+        logger.info("start checkSuccessful with " + validUser);
         //
         // Steps
         EditAccountPage editAccountPage = loadApplication()
@@ -66,6 +67,8 @@ public class LoginTest extends TestRunnerStrategy {
                 .getSlideshow0FirstImageAttributeSrcText()
                 .contains(HomePage.EXPECTED_IPHONE6));
         presentationSleep();
+        //
+        logger.info("done checkSuccessful with " + validUser);
     }
 
     /*

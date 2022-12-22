@@ -113,9 +113,11 @@ public class LoginPage extends AccountSidebarGuestPart {
     @Step("STEP SUCCESSFUL LOGIN")
     public MyAccountPage successfulLogin(IUser validUser) {
     //public MyAccountPage successfulLogin(String email, String passwo`r`d) {
+        logger.debug("start successfulLogin with " + validUser);
         fillLogin(validUser);
         //fillLogin(email, password);
         //return new MyAccountPage(driver);
+        logger.debug("done successfulLogin with " + validUser);
         return new MyAccountPage();
     }
 

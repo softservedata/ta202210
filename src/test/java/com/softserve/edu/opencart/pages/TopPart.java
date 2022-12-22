@@ -338,10 +338,12 @@ public abstract class TopPart {
     // dropdownGuest
     @Step("STEP GOTO LOGIN PAGE")
     public LoginPage gotoLoginPage() {
+        logger.debug("start gotoLoginPage");
         openMyAccountDropdown();
         createDropdownGuest();
         clickDropdownGuestLogin();
         //return new LoginPage(driver);
+        logger.debug("done gotoLoginPage");
         return new LoginPage();
     }
 
