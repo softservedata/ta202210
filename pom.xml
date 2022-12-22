@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.softserve.edu</groupId>
-  <artifactId>ta202210</artifactId>
+  <artifactId>ta202210logger</artifactId>
   <version>1.0</version>
 
   <packaging>jar</packaging>
@@ -211,16 +211,17 @@
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <!--      <version>1.7.36</version>-->
-      <version>2.0.3</version>
+      <version>2.0.6</version>
       <scope>compile</scope>
     </dependency>
 
     <dependency>
       <groupId>org.slf4j</groupId>
-<!--      <artifactId>slf4j-log4j12</artifactId>-->
-      <artifactId>slf4j-reload4j</artifactId>
+<!--      <artifactId>slf4j-log4jm12</artifactId>-->
+<!--      <artifactId>slf4j-reload4j</artifactId>-->
 <!--      <version>1.7.36</version>-->
-      <version>2.0.3</version>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>2.0.6</version>
       <scope>runtime</scope>
     </dependency>
 
