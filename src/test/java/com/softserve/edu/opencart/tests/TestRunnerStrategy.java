@@ -16,6 +16,7 @@ import java.util.Map;
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
 import io.qameta.allure.Attachment;
+import io.qameta.allure.Step;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -82,14 +83,14 @@ public abstract class TestRunnerStrategy {
     }
     */
 
-    /*
-    @Attachment(value = "{0}", type = "image/png")
+    // /*
+    @Attachment(value = "Image name = {0}", type = "image/png")
     public byte[] saveImageAttach(String attachName) {
         byte[] result = null;
         File scrFile = ((TakesScreenshot) DriverWrapper.getDriver()).getScreenshotAs(OutputType.FILE);
         try {
             result = Files.readAllBytes(scrFile.toPath());
-            FileUtils.copyFile(scrFile, new File(System.getenv().get("USERPROFILE") + "\\Downloads\\screenshot.png"));
+            //FileUtils.copyFile(scrFile, new File(System.getenv().get("USERPROFILE") + "\\Downloads\\screenshot.png"));
         } catch (IOException e) {
             // TODO Create Custom Exception
             e.printStackTrace();
@@ -102,16 +103,16 @@ public abstract class TestRunnerStrategy {
         return DriverWrapper.getDriver().getPageSource().getBytes();
     }
 
-
     @Attachment(value = "{0}", type = "text/plain")
     public byte[] saveTextAttach(String attachName, String fileName) {
         logger.info("attachName = " + attachName + "  fileName = " + fileName);
-        //String path = this.getClass().getResource("/").getPath();
+        //String path = this.getClass().getResource("/").getPath() + fileName;
         //String path = path.replace("d:/", fileName);
         //path = path.substring(1);
-        String path = "C:/Tools/ideaProjects/ta202204strategy/" + fileName;
+        String path = "./" + fileName;
         byte[] result = null;
         try {
+            logger.info("PATH = " + Paths.get(path));
             result = Files.readAllBytes(Paths.get(path));
         } catch (IOException e) {
             // TODO Create Custom Exception
@@ -119,7 +120,7 @@ public abstract class TestRunnerStrategy {
         }
         return result;
     }
-    */
+    // */
 
 
     /*
@@ -186,9 +187,10 @@ public abstract class TestRunnerStrategy {
             //takeScreenShot(testName);
             //takePageSource(testName);
             //saveTextAttach("Attach file: testng.xml = ", "testng.xml");
-//            saveImageAttach("PICTURE Test name = " + result.getName());
-//            saveHtmlAttach("HTML User is "+ result.getName());
-//            saveTextAttach("Attach file: testng.xml = ", "testng04par.xml");
+            saveImageAttach("PICTURE Test name = " + result.getName());
+            saveHtmlAttach("HTML User is "+ result.getName());
+            saveTextAttach("Attach file: testng.xml = ", "testng.xml");
+            //saveTextAttach("Attach file: testng.xml = ", "users.csv");
             DriverWrapper.deleteCookies();
             // driver.manage().deleteAllCookies(); // clear cache; delete cookie; delete
             // session;
@@ -200,6 +202,7 @@ public abstract class TestRunnerStrategy {
         presentationSleep(); // For Presentation ONLY
     }
 
+    @Step("STEP LOAD APPLICATION")
     protected HomePage loadApplication() {
         DriverWrapper.getUrl(BASE_URL);
         //return new HomePage(driver);

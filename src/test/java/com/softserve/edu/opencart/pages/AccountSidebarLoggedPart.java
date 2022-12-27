@@ -81,6 +81,7 @@ public abstract class AccountSidebarLoggedPart extends AccountSidebarPart {
         return new EditAccountPage();
     }
 
+    @Step("STEP LOGOUT RIGHT")
     public AccountLogoutPage gotoLogoutRight() {
         clickLogoutRight();
         //return new AccountLogoutPage(driver);

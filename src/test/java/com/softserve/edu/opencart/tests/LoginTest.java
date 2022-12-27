@@ -6,10 +6,12 @@ import com.softserve.edu.opencart.pages.EditAccountPage;
 import com.softserve.edu.opencart.pages.HomePage;
 import com.softserve.edu.opencart.pages.UnsuccessfulLoginPage;
 import com.softserve.edu.opencart.tools.ListUtils;
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+@Feature("Feature Class LoginTest")
 //public class LoginTest extends TestRunnerFirst {
 public class LoginTest extends TestRunnerStrategy {
 
@@ -39,6 +41,13 @@ public class LoginTest extends TestRunnerStrategy {
         //return ListUtils.toMultiArray(UserRepository.get().fromExcel());
     }
 
+    @Description("TEST DESCRIPTION: class SearchAllureTest; checkSuccessful(...).")
+    @Severity(SeverityLevel.BLOCKER)
+    @Story("STORY SearchAllureTest")
+    @Feature("Class Feature: Add Class Feature")
+    @Issue("SSITAGT-1")
+    @Link(name = "LINK goto site", url = "http://taqc-opencart.epizy.com/?i=1")
+    @TmsLink(value = "TL-678")
     @Test(dataProvider = "dataSuccessful")
     //public void checkSuccessful(String email, String password, String firstName) {
     public void checkSuccessful(IUser validUser) {

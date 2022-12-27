@@ -1,5 +1,6 @@
 package com.softserve.edu.opencart.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -40,6 +41,7 @@ public class AccountLogoutPage extends AccountSidebarGuestPart {
 
     // Business Logic
 
+    @Step("STEP GOTO CONTINUE")
     public HomePage gotoContinue() {
         clickContinueButton();
         //return new HomePage(driver);
