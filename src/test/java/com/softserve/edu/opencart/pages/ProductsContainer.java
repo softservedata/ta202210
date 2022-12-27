@@ -1,6 +1,7 @@
 package com.softserve.edu.opencart.pages;
 
 //import com.softserve.edu.opencart.data.Product;
+import com.softserve.edu.opencart.data.Product;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -103,7 +104,7 @@ public class ProductsContainer {
         getProductComponentByName(productName).clickAddToWishButton();
     }
 
-    /*-
+
     public String getProductComponentPriceByProduct(Product product)
     {
         return getProductComponentPriceByName(product.getName());
@@ -112,14 +113,14 @@ public class ProductsContainer {
     {
         return getProductComponentDescriptionByName(product.getName());
     }
-    */
+
 
     // Business Logic
 
-    /*-
+
     public ProductComponent getProductComponentByName(Product product)
     {
         return getProductComponentByName(product.getName());
     }
-    */
+
 }

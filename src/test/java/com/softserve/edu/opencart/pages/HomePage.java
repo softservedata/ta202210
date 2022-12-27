@@ -2,6 +2,8 @@ package com.softserve.edu.opencart.pages;
 
 //import com.softserve.edu.opencart.data.Product;
 import com.softserve.edu.opencart.data.Currencies;
+import com.softserve.edu.opencart.data.Product;
+import com.softserve.edu.opencart.data.Products;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -74,13 +76,13 @@ public class HomePage extends TopPart {
 //        //return new HomePage();
     }
 
-//    public HomePage scrollToProduct(Product product) {
-//        WebElement webElement = getProductComponentsContainer()
-//                .getProductComponentByName(product.getName())
-//                .getName();
-//        scrollToElement(webElement);
-//        //return new HomePage(driver);
-//        //return new HomePage();
-//        return this;
-//    }
+    public HomePage scrollToProduct(Product product) {
+       WebElement webElement = getProductComponentsContainer()
+              .getProductComponentByName(product.getName())
+               .getName();
+        scrollToElement(webElement);
+       return new HomePage(driver);
+       //return new HomePage();
+       //return this;
+    }
 }
