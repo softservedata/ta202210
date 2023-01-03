@@ -43,6 +43,7 @@ public class LoginTest extends TestRunnerStrategy {
 
     @Description("TEST DESCRIPTION: class SearchAllureTest; checkSuccessful(...).")
     @Severity(SeverityLevel.BLOCKER)
+    @Epic("Adding functionality of Adding two int ")
     @Story("STORY SearchAllureTest")
     @Feature("Class Feature: Add Class Feature")
     @Issue("SSITAGT-1")
