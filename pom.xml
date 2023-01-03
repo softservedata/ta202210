@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.softserve.edu</groupId>
-  <artifactId>ta202210logger</artifactId>
+  <artifactId>ta202210rest</artifactId>
   <version>1.0</version>
 
   <packaging>jar</packaging>
@@ -19,6 +19,7 @@
     <java.version>1.8</java.version>
     <!-- - - - - - Reports - - - - - -->
     <testng.reports.directory>./target/surefire-reports/test-output</testng.reports.directory>
+    <aspectj.version>1.9.19</aspectj.version>
     <!-- - - - - - Password - - - - - -->
     <application.password>null123</application.password>
   </properties>
@@ -75,8 +76,8 @@
 
     <!-- - - - - - DB - - - - - -->
     <dependency>
-      <groupId>com.mysql</groupId>
-      <artifactId>mysql-connector-j</artifactId>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
       <version>8.0.31</version>
     </dependency>
 
@@ -166,15 +167,15 @@
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
 <!--      <version>4.1.4</version>-->
-      <version>4.5.0</version>
+      <version>4.6.0</version>
       <scope>test</scope>
     </dependency>
 
     <dependency>
       <groupId>io.github.bonigarcia</groupId>
       <artifactId>webdrivermanager</artifactId>
-      <version>5.3.0</version>
-      <!--            <version>4.4.3</version>-->
+      <version>5.3.1</version>
+<!--      <version>4.4.3</version>-->
       <scope>test</scope>
     </dependency>
 
@@ -183,7 +184,7 @@
       <artifactId>htmlunit-driver</artifactId>
       <!-- <version>2.44.0</version> -->
 <!--      <version>3.61.0</version>-->
-      <version>4.5.0</version>
+      <version>4.6.0</version>
       <scope>test</scope>
     </dependency>
 
@@ -197,6 +198,21 @@
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
       <version>2.11.0</version>
+    </dependency>
+
+    <!-- - - - Rest - - - -->
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>okhttp</artifactId>
+      <version>4.10.0</version>
+    </dependency>
+
+
+    <!-- - - - Read from Excel formats, etc. - - - -->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>5.2.3</version>
     </dependency>
 
     <!-- - - - - - JSON - - - - - -->
@@ -217,10 +233,9 @@
 
     <dependency>
       <groupId>org.slf4j</groupId>
-<!--      <artifactId>slf4j-log4jm12</artifactId>-->
+      <artifactId>slf4j-log4j12</artifactId>
 <!--      <artifactId>slf4j-reload4j</artifactId>-->
 <!--      <version>1.7.36</version>-->
-      <artifactId>slf4j-log4j12</artifactId>
       <version>2.0.6</version>
       <scope>runtime</scope>
     </dependency>
@@ -230,13 +245,14 @@
       <groupId>io.qameta.allure</groupId>
       <artifactId>allure-testng</artifactId>
 <!--      <version>2.17.3</version>-->
-      <version>2.19.0</version>
+      <version>2.20.1</version>
     </dependency>
 
     <dependency>
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjweaver</artifactId>
-      <version>1.9.9.1</version>
+      <version>${aspectj.version}</version>
+<!--      <version>1.9.19</version>-->
       <!-- <scope>test</scope> -->
     </dependency>
 
@@ -287,11 +303,9 @@
             <!-- <suiteXmlFile>testng.xml</suiteXmlFile> -->
 <!--            <suiteXmlFile>testng03par.xml</suiteXmlFile>-->
           </suiteXmlFiles>
-          <!--
           <argLine>
               -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
           </argLine>
-          -->
         </configuration>
       </plugin>
 
